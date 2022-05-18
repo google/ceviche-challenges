@@ -13,7 +13,7 @@
 # limitations under the License.
 """Ceviche photonic design challenges."""
 
-__version__ = '1.0.0'
+__version__ = '1.0.1'
 
 import ceviche_challenges.beam_splitter
 import ceviche_challenges.defs
