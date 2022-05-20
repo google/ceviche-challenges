@@ -43,11 +43,11 @@ class Model(abc.ABC):
   routine.
 
   No up- or down-sampling of the design variable is performed while inlaying the
-  design variable, as in organic_wdm. Instead, the design variable shape must
-  match that of the design variable size specified by the model. Often the size
-  of the design variable will be identical to that of the design region, however
-  this isn't a requirement, e.g. if a model wishes to impose some symmetry. A
-  rough illustration of the inlaying for a planar WDM device is shown below:
+  design variable. Instead, the design variable shape must match that of the
+  design variable size specified by the model. Often the size of the design
+  variable will be identical to that of the design region, however this isn't a
+  requirement, e.g. if a model wishes to impose some symmetry. A rough
+  illustration of the inlaying for a planar WDM device is shown below:
 
                                 ___________________
                                 |                 |
@@ -146,7 +146,7 @@ class Model(abc.ABC):
 
     # We use the background epsilon_r for the modal functions because we do not
     # want autograd to attempt to track gradients through the eigensolver. Such
-    # tracking would likely fail as the eigensolver is not differentiable (yet).
+    # tracking would likely fail as the eigensolver is not differentiable.
     # Moreover, the modal sources should be located well away from the design
     # region.
     epsilon_r_bg = self.epsilon_r_bg()
@@ -191,7 +191,7 @@ class Model(abc.ABC):
         sm.append(b)
       return excite_port_idx, omega, [smi / sp for smi in sm], ez
 
-    # Run simulations in parallel across excitation porta and omegas.
+    # Run simulations in parallel across excitation ports and omegas.
     num_workers = max_parallelizm
     if not num_workers:
       num_workers = num_excite_ports * num_omegas

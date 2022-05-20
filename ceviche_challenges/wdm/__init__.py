@@ -13,4 +13,5 @@
 # limitations under the License.
 
 import ceviche_challenges.wdm.model
+import ceviche_challenges.wdm.prefabs
 import ceviche_challenges.wdm.spec

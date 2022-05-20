@@ -29,7 +29,7 @@ class WdmModel(model_base.Model):
   """A planar WDM device with one design region, in ceviche."""
 
   def __init__(self, params: _params.CevicheSimParams, spec: _spec.WdmSpec):
-    """Initializes a new model using `SimParams` and `WdmSpec` from organic_wdm.
+    """Initializes a new model using `SimParams` and `WdmSpec`.
 
     Args:
       params: `SimParams` specifying the simulation parameters.
