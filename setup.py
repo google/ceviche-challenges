@@ -16,7 +16,7 @@ import setuptools
 
 setuptools.setup(
     name='ceviche_challenges',
-    version='1.0.2',
+    version='1.0.3',
     license='Apache 2.0',
     author='Google LLC',
     author_email='noreply@google.com',

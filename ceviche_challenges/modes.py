@@ -217,7 +217,7 @@ def solve_modes(
   # where E is the transverse electric field component of the eigenmode and β²
   # is the eigenvalue. β corresponds to the guided wavevector of the eigenmode.
   vals, vecs = scipy.sparse.linalg.eigs(
-      dxf.dot(dxb) + k0**2 * diag_eps_r,
+      dxb.dot(dxf) + k0**2 * diag_eps_r,
       k=order,
       v0=epsilon_r.ravel(),
       which='LR')
@@ -235,5 +235,8 @@ def solve_modes(
   # where the β term originates from the spatial derivative in the propagation
   # direction.
   h = beta / omega / constants.MU_0 * e
+  # Since the Yee grid is staggered
+  # the field accumulates a phase on a distance equal to half a cell
+  h_yee = h * np.exp(1j * dl / 2)
 
-  return e, h, beta
+  return e, h_yee, beta
