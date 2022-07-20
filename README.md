@@ -14,7 +14,7 @@ splitter, a waveguide mode converter, a waveguide bend, and a wavelength
 division multiplexer (WDM).
 
 The code in this module was used to produce the results in the
-[Inverse design of photonic devices with strict foundry fabrication constraints](https://arxiv.org/abs/2201.12965)
+[Inverse Design of Photonic Devices with Strict Foundry Fabrication Constraints](https://doi.org/10.1021/acsphotonics.2c00313)
 paper.
 
 ## Challenge problems
@@ -66,7 +66,7 @@ spec = ceviche_challenges.waveguide_bend.prefabs.waveguide_bend_2umx2um_spec()
 params = ceviche_challenges.waveguide_bend.prefabs.waveguide_bend_sim_params()
 model = ceviche_challenges.waveguide_bend.model.WaveguideBendModel(params, spec)
 
-# The model class provides a convenience property, `design_variable_shape
+# The model class provides a convenience property, `design_variable_shape`
 # which specifies the design shape it expects.
 design = np.ones(model.design_variable_shape)
 
@@ -104,14 +104,18 @@ documentation at this time.
 ## Citation
 
 If you find `ceviche_challenges` to be useful for your research, please consider
- citing our [paper](https://arxiv.org/abs/2201.12965). A BibTex citation is
- provided below for convenience.
+citing our [paper](https://doi.org/10.1021/acsphotonics.2c00313). A BibTex
+citation is provided below for convenience.
 
 ```
 @article{schubert_inverse_2022,
-  title={Inverse design of photonic devices with strict foundry fabrication constraints},
-  author={Schubert, Martin F and Cheung, Alfred KC and Williamson, Ian AD and Spyra, Aleksandra and Alexander, David H},
-  journal={arXiv preprint arXiv:2201.12965},
-  year={2022}
+  title = {Inverse Design of Photonic Devices with Strict Foundry Fabrication Constraints},
+  author = {Schubert, Martin F. and Cheung, Alfred K. C. and Williamson, Ian A. D. and Spyra, Aleksandra and Alexander, David H.},
+  journal = {ACS Photonics},
+  volume = {9},
+  number = {7},
+  pages = {2327-2336},
+  year = {2022},
+  doi = {10.1021/acsphotonics.2c00313},
 }
 ```
