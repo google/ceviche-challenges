@@ -18,26 +18,23 @@ def ceviche_simulate(excite_port_idx, omega, dl, epsilon_r_bg, pml_width, epsilo
             dl,
             epsilon_r_bg,
         )
-        hx, hy, ez = sim.solve(source)
+        return sim.solve(source)
 
-        sm = []
-        sp = []
-        for j, port in enumerate(ports):
-            a, b = calculate_amplitudes(
-                omega,
-                dl,
-                port,
-                ez,
-                hy,
-                hx,
-                epsilon_r_bg,
-            )
-            if j == excite_port_idx:
-                sp = a
-            sm.append(b)
-        return [smi / sp for smi in sm], ez
-    
-    res = _simulate(epsilon_r)
-    #print(res)
-    return res
+    hx, hy, ez = _simulate(epsilon_r)
+    sm = []
+    sp = []
+    for j, port in enumerate(ports):
+        a, b = calculate_amplitudes(
+            omega,
+            dl,
+            port,
+            ez,
+            hy,
+            hx,
+            epsilon_r_bg,
+        )
+        if j == excite_port_idx:
+            sp = a
+        sm.append(b)
+    return [smi / sp for smi in sm], ez
 

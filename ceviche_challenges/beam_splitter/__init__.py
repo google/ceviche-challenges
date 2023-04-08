@@ -13,5 +13,6 @@
 # limitations under the License.
 
 import ceviche_challenges.beam_splitter.model
+import ceviche_challenges.beam_splitter.jax_model
 import ceviche_challenges.beam_splitter.prefabs
 import ceviche_challenges.beam_splitter.spec

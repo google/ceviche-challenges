@@ -13,5 +13,6 @@
 # limitations under the License.
 
 import ceviche_challenges.mode_converter.model
+import ceviche_challenges.mode_converter.jax_model
 import ceviche_challenges.mode_converter.prefabs
 import ceviche_challenges.mode_converter.spec

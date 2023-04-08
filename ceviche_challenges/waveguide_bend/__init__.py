@@ -13,5 +13,6 @@
 # limitations under the License.
 
 import ceviche_challenges.waveguide_bend.model
+import ceviche_challenges.waveguide_bend.jax_model
 import ceviche_challenges.waveguide_bend.prefabs
 import ceviche_challenges.waveguide_bend.spec

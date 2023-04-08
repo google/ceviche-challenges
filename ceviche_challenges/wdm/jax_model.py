@@ -1,3 +1,3 @@
 from ._model import generateModel
 
-WdmModel = generateModel(False)
+WdmModel = generateModel(True)
