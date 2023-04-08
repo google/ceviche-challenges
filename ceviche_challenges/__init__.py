@@ -27,3 +27,6 @@ import ceviche_challenges.scattering
 import ceviche_challenges.units
 import ceviche_challenges.waveguide_bend
 import ceviche_challenges.wdm
+
+from jax.config import config
+config.update("jax_enable_x64", True)

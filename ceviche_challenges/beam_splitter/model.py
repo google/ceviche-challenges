@@ -17,7 +17,7 @@ from typing import Tuple, List
 
 from ceviche_challenges import units as u
 from ceviche_challenges import defs
-from ceviche_challenges import model_base
+from ceviche_challenges import jax_model_base as model_base
 from ceviche_challenges import modes
 from ceviche_challenges import params as _params
 from ceviche_challenges.beam_splitter import spec as _spec
